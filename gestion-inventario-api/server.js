@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -18,6 +19,7 @@ app.use('/api/ventas', require('./routes/ventaRoutes'));
 app.use('/api/gastos', require('./routes/gastoRoutes'));
 app.use('/api/ingresos', require('./routes/ingresoRoutes'));
 app.use('/api/usuarios', require('./routes/usuarioRoutes'));
+app.use('/api/auth', require('./routes/authRoutes'))
 
 // Iniciar servidor
 const PORT = process.env.PORT || 5000;
